@@ -1,0 +1,302 @@
+.main {
+  max-width: 1220px;
+  margin: auto;
+  padding: 44px 24px;
+}
+.intro {
+  max-width: 650px;
+  margin-bottom: 42px;
+}
+.eyebrow {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 13px;
+}
+.intro h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -0.07em;
+  margin: 10px 0 18px;
+}
+.intro p {
+  color: var(--sub);
+  font-size: 17px;
+  max-width: 550px;
+}
+.memberLinks{display:flex;flex-wrap:wrap;gap:22px;margin-top:22px}
+.memberLinks a,.authorLink{color:var(--primary);font-weight:700;text-decoration:none}
+.memberLinks a{min-height:44px;display:inline-flex;align-items:center}
+.memberLinks a:hover,.authorLink:hover{text-decoration:underline}
+.columns {
+  display: grid;
+  grid-template-columns: minmax(290px, 390px) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 82px);
+  align-items: start;
+}
+.composer {
+  position: sticky;
+  top: 24px;
+  border-top: 3px solid var(--primary);
+  padding-top: 22px;
+  display: grid;
+  gap: 12px;
+}
+.composer h2,
+.stream h2 {
+  margin: 0;
+  font-size: 25px;
+  letter-spacing: -0.04em;
+}
+.composer p {
+  margin: 0;
+  color: var(--sub);
+}
+.composer label,
+.post form label {
+  display: grid;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 650;
+}
+.composer textarea,
+.composer select,
+.post input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 12px;
+}
+.composer textarea {
+  resize: vertical;
+  min-height: 136px;
+}
+.composer small {
+  justify-self: end;
+  color: var(--sub);
+}
+.composer fieldset {
+  border: 0;
+  padding: 4px 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.composer legend {
+  font-size: 14px;
+  font-weight: 650;
+  margin-bottom: 6px;
+}
+.composer fieldset label {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+.composer input[type='radio'] {
+  accent-color: var(--primary);
+  width: 19px;
+  height: 19px;
+}
+.composer .hint {
+  font-size: 13px;
+  border-left: 3px solid var(--warning);
+  padding-left: 12px;
+}
+.composer > button,
+.join button,
+.review button,
+.post form button,
+.more {
+  min-height: 46px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: 10px 18px;
+  font-weight: 700;
+}
+.review {
+  background: var(--soft);
+  border: 1px solid var(--border);
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+  border-radius: 10px;
+}
+.review p {
+  color: var(--text);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.review small {
+  justify-self: start;
+}
+.streamHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 17px;
+}
+.textButton {
+  background: none !important;
+  border: 0;
+  color: var(--primary) !important;
+  padding: 8px 0 !important;
+  font-weight: 650;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.post {
+  border-bottom: 1px solid var(--border);
+  padding: 24px 0;
+}
+.postMeta {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  font-weight: 750;
+}
+.postMeta strong,
+.postMeta small {
+  display: block;
+}
+.postMeta small {
+  color: var(--sub);
+  font-size: 12px;
+}
+.postBody {
+  font-size: 17px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 20px 0;
+}
+.snapshot {
+  border-left: 3px solid var(--primary);
+  padding: 5px 15px;
+  display: grid;
+  gap: 2px;
+  background: var(--soft);
+}
+.snapshot span,
+.snapshot small {
+  color: var(--sub);
+  font-size: 12px;
+}
+.postActions {
+  display: flex;
+  gap: 18px;
+  margin-top: 16px;
+}
+.postActions button {
+  background: none;
+  border: 0;
+  color: var(--sub);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 44px;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 650;
+}
+.postActions button:hover {
+  color: var(--primary);
+}
+.post form {
+  display: grid;
+  gap: 9px;
+  margin-top: 14px;
+}
+.post form button {
+  justify-self: start;
+}
+.empty {
+  padding: 32px 0;
+  color: var(--sub);
+}
+.join {
+  max-width: 520px;
+  border-top: 3px solid var(--primary);
+  padding-top: 28px;
+  display: grid;
+  gap: 12px;
+}
+.join h2,
+.join p {
+  margin: 0;
+}
+.join p {
+  color: var(--sub);
+}
+.join button {
+  justify-self: start;
+  margin-top: 12px;
+}
+.error,
+.notice {
+  padding: 12px 16px;
+  border-radius: 7px;
+  margin-bottom: 18px;
+}
+.error {
+  color: var(--danger);
+  background: var(--soft);
+}
+.notice {
+  color: var(--success);
+  background: var(--muted);
+}
+.more {
+  margin-top: 24px;
+}
+@media (max-width: 767px) {
+  .main {
+    padding: 28px 16px calc(110px + env(safe-area-inset-bottom));
+  }
+  .intro {
+    margin-bottom: 28px;
+  }
+  .intro h1 {
+    font-size: 48px;
+  }
+  .intro p {
+    font-size: 15px;
+  }
+  .columns {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+  }
+  .composer {
+    position: static;
+    width: 100%;
+  }
+  .stream {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .main *,
+  .main *::before,
+  .main *::after {
+    scroll-behavior: auto !important;
+  }
+}

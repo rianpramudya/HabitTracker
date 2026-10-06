@@ -1,0 +1,266 @@
+.page {
+  max-width: 1320px;
+  margin: auto;
+  padding: 32px 48px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 21px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+.brand svg {
+  color: var(--primary);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+  flex: 1;
+  padding: 70px 0;
+}
+.hero h1 {
+  font-size: clamp(40px, 5vw, 66px);
+  line-height: 1.12;
+  letter-spacing: -2.7px;
+  margin: 24px 0;
+}
+.hero p {
+  color: var(--sub);
+  font-size: 18px;
+  max-width: 510px;
+  line-height: 1.8;
+}
+.pill {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--primary);
+  background: var(--soft);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 650;
+}
+.pill span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  margin: 32px 0 16px;
+  flex-wrap: wrap;
+}
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 18px;
+  min-height: 48px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+.secondary {
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.hero small,
+.footer {
+  color: var(--sub);
+}
+.sample {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 24px 70px rgb(23 35 58 / 7%);
+  transform: rotate(-2deg);
+}
+.sampleHead {
+  display: flex;
+  gap: 10px;
+  color: var(--primary);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.days {
+  display: flex;
+  gap: 8px;
+  margin: 24px 0;
+}
+.days > div {
+  flex: 1;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  padding: 10px 4px;
+  background: var(--canvas);
+  border-radius: 12px;
+}
+.days .selected {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+.days span {
+  height: 3px;
+  width: 3px;
+  background: currentColor;
+  border-radius: 50%;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.row > div:nth-child(2) {
+  flex: 1;
+}
+.row p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+.row strong {
+  font-size: 14px;
+}
+.icon,
+.water,
+.finance {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--primary);
+}
+.water {
+  background: var(--water-soft);
+  color: var(--water);
+}
+.finance {
+  background: var(--finance-soft);
+  color: var(--finance);
+}
+.progress {
+  height: 6px;
+  border-radius: 4px;
+  background: var(--muted);
+  margin: 24px 0 10px;
+}
+.progress span {
+  display: block;
+  height: 100%;
+  width: 60%;
+  border-radius: 4px;
+  background: var(--primary);
+}
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  gap: 16px;
+}
+@media (max-width: 800px) {
+  .page {
+    padding: 24px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 48px 0;
+  }
+  .hero h1 {
+    letter-spacing: -1.5px;
+  }
+  .sample {
+    transform: none;
+    max-width: 500px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 360px) {
+  .page {
+    padding: 16px;
+  }
+  .sample {
+    padding: 20px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+}
+
+/* Shared visual language for the public and closed-access shells. */
+.sample {
+  border-radius: 6px;
+  transform: none;
+  box-shadow: none;
+}
+.days {
+  gap: 0;
+  border-block: 1px solid var(--border);
+  padding-block: 8px;
+}
+.days > div {
+  background: transparent;
+  border-radius: 0;
+}
+.days .selected {
+  border-radius: 4px 4px 18px 4px;
+}
+.icon,
+.water,
+.finance {
+  background: none;
+  border-radius: 0;
+}
+.pill {
+  border-radius: 4px;
+}
+.primary,
+.secondary {
+  border-radius: 6px;
+}
+.access {
+  max-width: 680px;
+  padding: 72px 0;
+}
+.access h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+  margin: 24px 0;
+}
+.access p {
+  color: var(--sub);
+  max-width: 55ch;
+  line-height: 1.8;
+}

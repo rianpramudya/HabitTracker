@@ -1,0 +1,2024 @@
+.shell {
+  min-height: 100dvh;
+}
+.skip {
+  position: fixed;
+  top: -80px;
+  left: 20px;
+  z-index: 100;
+  padding: 12px;
+  background: var(--surface);
+  border: 2px solid var(--primary);
+}
+.skip:focus {
+  top: 10px;
+}
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 224px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 16px 20px;
+}
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+}
+.brandIcon {
+  width: 34px;
+  height: 38px;
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+.brandSub {
+  display: block;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--sub);
+  margin-top: 2px;
+}
+.nav {
+  display: grid;
+  gap: 8px;
+  margin-top: 48px;
+}
+.nav :is(button, a) {
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--sub);
+  font-weight: 550;
+  padding: 14px 16px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 14px;
+  min-height: 48px;
+}
+.nav :is(button, a):hover {
+  background: var(--canvas);
+  color: var(--text);
+}
+.nav .navActive {
+  background: var(--soft);
+  color: var(--primary);
+}
+.navDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-left: auto;
+}
+.sidebarBottom {
+  margin-top: auto;
+  display: grid;
+  gap: 18px;
+}
+.privacyNote {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 14px 8px;
+  color: var(--sub);
+  font-size: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: none;
+  color: var(--text);
+  text-align: left;
+  padding: 0 4px;
+}
+.profile > span:nth-child(2) {
+  flex: 1;
+}
+.profile strong {
+  font-size: 12px;
+  display: block;
+}
+.profile small {
+  color: var(--sub);
+  font-size: 10px;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: var(--soft);
+  color: var(--primary);
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 650;
+}
+.leave {
+  font-size: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--sub);
+  padding: 0 10px;
+  min-height: 32px;
+}
+.workspace {
+  margin-left: 224px;
+}
+.previewBar {
+  min-height: 34px;
+  padding: 6px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 10px;
+  color: var(--primary);
+  background: var(--soft);
+  border-bottom: 1px solid var(--border);
+}
+.previewBar button {
+  border: 0;
+  background: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  min-height: 24px;
+}
+.main {
+  max-width: 1344px;
+  margin: auto;
+  padding: 32px 36px 16px;
+  outline: none;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--sub);
+  font-size: 10px;
+  margin-bottom: 12px;
+}
+.header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header p {
+  color: var(--sub);
+  font-size: 13px;
+  margin-top: 8px;
+}
+.greetingDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--exercise);
+}
+.headerRight {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.private {
+  font-size: 10px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--sub);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 10px;
+}
+.iconButton {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--sub);
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+}
+.iconButton:hover {
+  background: var(--muted);
+  color: var(--text);
+}
+.dateHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.dateHeading h2 {
+  font-size: 15px;
+}
+.dateControls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--sub);
+  font-size: 11px;
+}
+.dateControls button {
+  border: 0;
+  background: none;
+  color: inherit;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.day {
+  position: relative;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 13px 8px 10px;
+  min-height: 90px;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+}
+.day > span:first-child {
+  font-size: 11px;
+  color: var(--sub);
+}
+.day strong {
+  font-size: 22px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+.day:hover {
+  border-color: var(--primary);
+}
+.day.daySelected {
+  background: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary);
+}
+.daySelected > span:first-child {
+  color: var(--on-primary);
+}
+.dayDots {
+  height: 5px;
+  display: flex;
+  gap: 3px;
+}
+.dayDots i {
+  width: 3px;
+  height: 3px;
+  background: var(--control);
+  opacity: 0.3;
+  border-radius: 50%;
+}
+.dayDots .filledDot {
+  background: var(--success);
+  opacity: 1;
+}
+.daySelected .dayDots i {
+  background: var(--on-primary);
+}
+.todayMark {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+.primaryColumn,
+.summaryColumn {
+  display: grid;
+  gap: 24px;
+}
+.habitPanel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+}
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.sectionHead h2 {
+  font-size: 16px;
+}
+.sectionHead p,
+.sectionHead > span {
+  color: var(--sub);
+  font-size: 11px;
+  margin-top: 5px;
+}
+.progressLine {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 6px 0 12px;
+}
+.progressLine strong {
+  font-size: 11px;
+  color: var(--primary);
+}
+.track {
+  height: 5px;
+  border-radius: 10px;
+  background: var(--muted);
+  flex: 1;
+  overflow: hidden;
+}
+.track span {
+  display: block;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 10px;
+  transition: width 200ms ease;
+}
+.habitList {
+  margin: 8px 0 20px;
+}
+.habitRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.habitRow:last-child {
+  border: 0;
+}
+.moduleIcon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--primary);
+  background: var(--soft);
+  flex-shrink: 0;
+}
+.moduleIcon[data-module='exercise'] {
+  color: var(--exercise);
+  background: var(--exercise-soft);
+}
+.moduleIcon[data-module='study'] {
+  color: var(--study);
+  background: var(--study-soft);
+}
+.moduleIcon[data-module='water'] {
+  color: var(--water);
+  background: var(--water-soft);
+}
+.moduleIcon[data-module='finance'] {
+  color: var(--finance);
+  background: var(--finance-soft);
+}
+.moduleIcon[data-module='fasting'] {
+  color: var(--warning);
+  background: var(--warning-soft);
+}
+.habitInfo {
+  background: none;
+  border: 0;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+  padding: 2px 0;
+  color: var(--text);
+  min-height: 44px;
+}
+.habitInfo strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.habitInfo small {
+  display: block;
+  color: var(--sub);
+  font-size: 11px;
+  margin-top: 4px;
+}
+.checkButton,
+.addButton,
+.doneBadge {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 0;
+  background: none;
+  color: var(--sub);
+  position: relative;
+  flex-shrink: 0;
+}
+.checkButton::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1.5px solid var(--control);
+  border-radius: 50%;
+}
+.checkButton.checked::before {
+  border-color: var(--success);
+  background: var(--finance-soft);
+}
+.checked svg {
+  position: relative;
+  color: var(--success);
+}
+.addButton {
+  background: var(--canvas);
+  color: var(--primary);
+  border-radius: 10px;
+}
+.doneBadge {
+  color: var(--success);
+  background: var(--finance-soft);
+  border-radius: 10px;
+}
+.detailsButton {
+  border: 0;
+  background: none;
+  color: var(--sub);
+  height: 44px;
+  width: 28px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.primaryButton,
+.secondaryButton,
+.waterButton,
+.dangerButton {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 650;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+}
+.primaryButton {
+  background: var(--primary);
+  color: var(--on-primary);
+  width: 100%;
+}
+.secondaryButton {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+.waterButton {
+  background: var(--water-soft);
+  color: var(--water);
+  width: 100%;
+}
+.dangerButton {
+  background: var(--danger);
+  color: var(--surface);
+}
+.primaryButton:hover {
+  filter: brightness(0.96);
+}
+.secondaryButton:hover {
+  background: var(--muted);
+}
+.textButton {
+  border: 0;
+  background: none;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 7px 0;
+}
+.quickSection {
+  padding: 2px 0;
+}
+.quickGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.quickGrid button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px;
+  border-radius: 12px;
+  min-height: 60px;
+  font-size: 11px;
+  min-width: 0;
+}
+.quickGrid .moduleIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+}
+.quickGrid button > svg {
+  margin-left: auto;
+  color: var(--sub);
+}
+.quickGrid button:hover {
+  border-color: var(--control);
+}
+.reflection {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 24px;
+}
+.reflectionIcon {
+  color: var(--study);
+}
+.moods {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.moods button,
+.periods button,
+.themeOptions button,
+.dayChecks button {
+  padding: 9px 12px;
+  min-height: 44px;
+  font-size: 11px;
+  background: var(--canvas);
+  color: var(--sub);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+.moods .selectedPill,
+.periods .selectedPill,
+.themeOptions .selectedPill,
+.dayChecks .selectedPill {
+  background: var(--soft);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.reflection textarea {
+  border-color: var(--border);
+  background: var(--canvas);
+  font-size: 12px;
+}
+.reflectionFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+.reflectionFooter small {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 10px;
+  color: var(--sub);
+}
+.waterPanel,
+.financePanel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+}
+.waterPanel > .sectionHead > svg {
+  color: var(--water);
+}
+.waterContent {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 22px 0;
+}
+.ring {
+  width: 114px;
+  height: 114px;
+  position: relative;
+  flex-shrink: 0;
+}
+.ring > svg:first-child {
+  width: 100%;
+  height: 100%;
+}
+.ring > svg:last-child {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  color: var(--water);
+}
+.waterContent strong {
+  font-size: 28px;
+  letter-spacing: -1px;
+  font-variant-numeric: tabular-nums;
+}
+.waterContent p {
+  font-size: 11px;
+  color: var(--sub);
+  margin-top: 4px;
+}
+.waterContent small {
+  font-size: 10px;
+  color: var(--sub);
+}
+.waterPanel > .textButton {
+  width: 100%;
+  padding-bottom: 0;
+}
+.financePanel > small {
+  color: var(--sub);
+  font-size: 11px;
+}
+.bigMoney {
+  display: block;
+  font-size: 28px;
+  letter-spacing: -1px;
+  margin: 8px 0 16px;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+.miniFinance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0 18px;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+  color: var(--sub);
+}
+.miniFinance strong {
+  color: var(--success);
+  font-size: 11px;
+}
+.financePanel > .secondaryButton {
+  width: 100%;
+}
+.noTransactions {
+  font-size: 11px;
+  color: var(--sub);
+  margin-bottom: 18px;
+}
+.dayNote {
+  padding: 8px 12px;
+  color: var(--sub);
+}
+.dayNoteIcon {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+.dayNote h3 {
+  color: var(--text);
+  font-size: 13px;
+}
+.dayNote p {
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 8px;
+  max-width: 250px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+  color: var(--sub);
+  padding: 24px 0 10px;
+  margin-top: 36px;
+}
+.mobileNav {
+  display: none;
+}
+.feedback,
+.error {
+  border: 1px solid var(--success);
+  background: var(--finance-soft);
+  color: var(--success);
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.error {
+  border-color: var(--danger);
+  background: var(--surface);
+  color: var(--danger);
+}
+.error button {
+  background: none;
+  border: 0;
+  color: inherit;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+}
+.periods {
+  display: flex;
+  gap: 8px;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.filter select {
+  width: 160px;
+  min-height: 44px;
+  font-size: 12px;
+  padding: 8px;
+}
+.financeStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.financeStats > div {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+}
+.financeStats small {
+  font-size: 11px;
+  color: var(--sub);
+  display: block;
+}
+.financeStats strong {
+  display: block;
+  font-size: 23px;
+  margin-top: 8px;
+  overflow-wrap: anywhere;
+}
+.financeStats svg {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  color: var(--sub);
+}
+.walletSection {
+  margin: 28px 0;
+}
+.walletGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.walletCard {
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.walletCard > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.walletCard strong {
+  font-size: 13px;
+}
+.walletCard small {
+  display: block;
+  font-size: 11px;
+  color: var(--sub);
+}
+.walletCard > b {
+  font-size: 26px;
+  display: block;
+  overflow-wrap: anywhere;
+}
+.timeline {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+}
+.timelineRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+}
+.timelineInfo {
+  flex: 1;
+  min-width: 0;
+}
+.timelineInfo > strong {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.timelineInfo small {
+  display: block;
+  font-size: 10px;
+  color: var(--sub);
+  margin-top: 5px;
+}
+.timelineInfo p {
+  font-size: 12px;
+  color: var(--sub);
+  margin-top: 7px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.entryAmount {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.entryActions {
+  display: flex;
+  gap: 6px;
+}
+.entryActions button {
+  background: none;
+  color: var(--primary);
+  border: 0;
+  font-size: 10px;
+  min-height: 44px;
+  padding: 8px;
+}
+.entryActions button:last-child {
+  color: var(--danger);
+}
+.empty {
+  display: grid;
+  justify-items: center;
+  padding: 48px 12px;
+  gap: 16px;
+  color: var(--sub);
+  font-size: 13px;
+}
+.settingsGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+.settingsPanel {
+  display: grid;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  align-content: start;
+}
+.settingsPanel h2 {
+  margin-top: 8px;
+  font-size: 17px;
+}
+.themeOptions {
+  display: flex;
+  gap: 8px;
+}
+.themeOptions button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+.moduleChecks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.moduleChecks label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  min-height: 44px;
+}
+.manageRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.manageRow strong {
+  font-size: 13px;
+}
+.manageRow small {
+  display: block;
+  font-size: 10px;
+  color: var(--sub);
+  margin-top: 5px;
+}
+.help {
+  color: var(--sub);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.dialog {
+  width: min(520px, calc(100vw - 32px));
+  max-height: 90dvh;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 12px 36px rgb(23 35 58 / 12%);
+}
+.dialog::backdrop {
+  background: rgb(10 20 40 / 45%);
+}
+.dialogHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  z-index: 1;
+}
+.form {
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+}
+.formActions {
+  display: flex;
+  gap: 12px;
+}
+.formActions > * {
+  flex: 1;
+}
+.twoFields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+}
+.fieldLabel {
+  font-size: 14px;
+  font-weight: 600;
+}
+.dayChecks {
+  display: flex;
+  gap: 5px;
+}
+.dayChecks button {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 3px;
+}
+.formError {
+  padding: 0 24px 24px;
+  color: var(--danger);
+  font-size: 13px;
+}
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (min-width: 1450px) {
+  .main {
+    padding: 40px 48px;
+  }
+  .dashboardGrid {
+    grid-template-columns: minmax(0, 1fr) 350px;
+  }
+  .habitRow {
+    padding: 20px 0;
+  }
+  .habitInfo strong {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1099px) {
+  .sidebar {
+    width: 80px;
+    padding: 24px 12px;
+  }
+  .brand {
+    padding: 0;
+    justify-content: center;
+  }
+  .brand > span:last-child,
+  .nav span,
+  .privacyNote,
+  .profile > span:nth-child(2),
+  .profile > svg,
+  .leave {
+    display: none;
+  }
+  .nav :is(button, a) {
+    padding: 12px;
+    justify-content: center;
+  }
+  .profile {
+    justify-content: center;
+  }
+  .workspace {
+    margin-left: 80px;
+  }
+  .main {
+    padding: 28px 24px;
+  }
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+  .summaryColumn {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dayNote {
+    grid-column: 1/-1;
+  }
+  .summaryColumn .dayNote {
+    display: none;
+  }
+  .settingsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .themeOptions {
+    flex-wrap: wrap;
+  }
+  .themeOptions button {
+    flex-basis: 100%;
+  }
+  .timelineRow {
+    flex-wrap: wrap;
+  }
+  .entryActions {
+    margin-left: auto;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .workspace {
+    margin: 0;
+  }
+  .main {
+    padding: 24px 16px 100px;
+  }
+  .previewBar {
+    padding: 6px 16px;
+    align-items: center;
+    font-size: 9px;
+  }
+  .previewBar button {
+    min-height: 32px;
+  }
+  .previewBar button span {
+    display: none;
+  }
+  .header {
+    margin-bottom: 24px;
+    gap: 12px;
+  }
+  .breadcrumb {
+    display: none;
+  }
+  .header p {
+    font-size: 11px;
+    max-width: 260px;
+  }
+  .headerRight .private {
+    display: none;
+  }
+  .headerRight {
+    gap: 0;
+  }
+  .dateHeading {
+    margin-bottom: 10px;
+  }
+  .dateControls {
+    gap: 2px;
+    font-size: 10px;
+  }
+  .dateControls button {
+    width: 36px;
+  }
+  .week {
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  .day {
+    border-radius: 10px;
+    min-height: 78px;
+    padding: 10px 2px 8px;
+  }
+  .day strong {
+    font-size: 19px;
+  }
+  .day > span:first-child {
+    font-size: 10px;
+  }
+  .todayMark {
+    top: 5px;
+    right: 5px;
+  }
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .primaryColumn,
+  .summaryColumn {
+    gap: 20px;
+  }
+  .habitPanel,
+  .reflection,
+  .waterPanel,
+  .financePanel,
+  .timeline,
+  .settingsPanel {
+    padding: 18px;
+  }
+  .habitRow {
+    gap: 10px;
+    padding: 14px 0;
+  }
+  .habitInfo strong {
+    font-size: 13px;
+  }
+  .habitInfo small {
+    font-size: 10px;
+  }
+  .habitRow .moduleIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .detailsButton {
+    width: 22px;
+  }
+  .checkButton,
+  .addButton,
+  .doneBadge {
+    width: 44px;
+  }
+  .sectionHead h2 {
+    font-size: 15px;
+  }
+  .quickGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .quickGrid button {
+    font-size: 11px;
+  }
+  .moods {
+    gap: 6px;
+  }
+  .moods button {
+    padding: 8px 10px;
+  }
+  .summaryColumn {
+    grid-template-columns: 1fr;
+  }
+  .dayNote {
+    display: none;
+  }
+  .waterContent {
+    justify-content: center;
+    gap: 28px;
+  }
+  .ring {
+    width: 120px;
+    height: 120px;
+  }
+  .bigMoney {
+    font-size: 28px;
+  }
+  .mobileNav {
+    display: flex;
+    position: fixed;
+    inset: auto 0 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    z-index: 10;
+    padding: 7px 8px calc(7px + env(safe-area-inset-bottom));
+  }
+  .mobileNav :is(button, a) {
+    flex: 1;
+    border: 0;
+    background: none;
+    color: var(--sub);
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 5px;
+    min-height: 52px;
+    font-size: 9px;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+  .mobileNav .mobileActive {
+    color: var(--primary);
+    background: var(--soft);
+  }
+  .footer {
+    font-size: 9px;
+    margin-top: 28px;
+  }
+  .toolbar {
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .periods {
+    gap: 5px;
+  }
+  .periods button {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+  .filter {
+    margin-left: auto;
+  }
+  .filter select {
+    width: 115px;
+    font-size: 11px;
+  }
+  .financeStats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .financeStats > div {
+    padding: 16px;
+  }
+  .financeStats strong {
+    font-size: 24px;
+  }
+  .walletGrid {
+    grid-template-columns: 1fr;
+  }
+  .timeline > .sectionHead {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .timeline > .sectionHead > .secondaryButton {
+    font-size: 11px;
+    min-height: 44px;
+  }
+  .timelineRow {
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .timelineRow .moduleIcon {
+    width: 36px;
+    height: 36px;
+  }
+  .timelineInfo {
+    min-width: 160px;
+  }
+  .entryAmount {
+    margin-left: 46px;
+    width: 100%;
+  }
+  .entryActions {
+    margin-left: auto;
+    margin-top: -44px;
+  }
+  .entryActions button {
+    font-size: 10px;
+  }
+  .settingsGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .dialog {
+    position: fixed;
+    inset: auto 0 0;
+    width: 100%;
+    max-width: none;
+    max-height: 92dvh;
+    margin: 0;
+    border-radius: 24px 24px 0 0;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .dialogHead {
+    padding: 16px 20px;
+  }
+  .form {
+    padding: 20px;
+  }
+  .twoFields {
+    gap: 10px;
+  }
+  .form label {
+    font-size: 12px;
+  }
+  .form input,
+  .form select,
+  .form textarea {
+    font-size: 16px;
+  }
+  .themeOptions button {
+    font-size: 10px;
+    padding: 9px;
+  }
+  .waterPanel .textButton {
+    margin-top: 4px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .summaryColumn {
+    grid-template-columns: 1fr 1fr;
+  }
+  .waterContent {
+    gap: 10px;
+  }
+  .ring {
+    width: 90px;
+    height: 90px;
+  }
+  .waterContent strong {
+    font-size: 23px;
+  }
+  .bigMoney {
+    font-size: 24px;
+  }
+}
+@media (max-width: 350px) {
+  .main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .previewBar {
+    padding: 6px 12px;
+  }
+  .habitPanel,
+  .reflection {
+    padding: 14px;
+  }
+  .habitInfo strong {
+    font-size: 12px;
+  }
+  .habitRow {
+    gap: 7px;
+  }
+  .detailsButton {
+    width: 18px;
+  }
+  .habitRow .moduleIcon {
+    width: 36px;
+    height: 36px;
+  }
+  .header h1 {
+    font-size: 24px;
+  }
+  .dateControls > span {
+    font-size: 9px;
+  }
+  .moods button {
+    font-size: 10px;
+    padding: 8px;
+  }
+  .timelineInfo {
+    min-width: 130px;
+  }
+  .entryActions {
+    margin-top: 0;
+  }
+  .entryAmount {
+    width: auto;
+  }
+  .twoFields {
+    grid-template-columns: 1fr;
+  }
+  .dayChecks button {
+    font-size: 10px;
+  }
+  .themeOptions {
+    flex-wrap: wrap;
+  }
+}
+
+/* Readable metadata and consistent touch controls. */
+.habitInfo strong {
+  font-size: 16px;
+}
+.habitInfo small {
+  font-size: 14px;
+}
+.sectionHead h2 {
+  font-size: 20px;
+}
+.sectionHead p {
+  font-size: 14px;
+}
+.primaryButton,
+.secondaryButton,
+.waterButton {
+  font-size: 14px;
+}
+.waterContent p {
+  font-size: 14px;
+}
+.waterContent small {
+  font-size: 12px;
+}
+.detailsButton {
+  width: 44px;
+}
+.entryActions button {
+  min-width: 44px;
+}
+.previewBar button {
+  min-height: 44px;
+}
+.mobileNav button {
+  font-size: 11px;
+}
+.dateControls button {
+  width: 44px;
+}
+.quickGrid button {
+  font-size: 13px;
+}
+.header p {
+  font-size: 14px;
+}
+.timelineInfo > strong {
+  font-size: 15px;
+}
+.timelineInfo small {
+  font-size: 13px;
+}
+.help {
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .habitInfo strong {
+    font-size: 14px;
+  }
+  .habitInfo small {
+    font-size: 12px;
+  }
+  .sectionHead h2 {
+    font-size: 18px;
+  }
+  .sectionHead p {
+    font-size: 12px;
+  }
+  .detailsButton {
+    width: 44px;
+  }
+  .header p {
+    font-size: 13px;
+  }
+  .primaryButton,
+  .secondaryButton,
+  .waterButton {
+    font-size: 13px;
+  }
+  .quickGrid button {
+    font-size: 12px;
+  }
+  .previewBar button {
+    min-height: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .dashboardGrid .primaryColumn,
+  .dashboardGrid .summaryColumn {
+    display: contents;
+  }
+  .habitPanel {
+    order: 0;
+  }
+  .quickSection {
+    order: 1;
+  }
+  .waterPanel {
+    order: 2;
+  }
+  .financePanel {
+    order: 3;
+  }
+  .reflection {
+    order: 4;
+  }
+}
+
+/* Daily agenda: quiet surfaces, a continuous week and purposeful accent. */
+.sidebar {
+  background: var(--canvas);
+  width: 216px;
+  padding: 32px 16px;
+}
+.workspace {
+  margin-left: 216px;
+}
+.brandIcon {
+  border-radius: 50% 50% 6px 50%;
+  background: var(--text);
+  color: var(--canvas);
+}
+.brandSub {
+  font-size: 11px;
+  margin-top: 6px;
+}
+.nav :is(button, a) {
+  border-radius: 6px;
+}
+.nav .navActive {
+  background: var(--soft);
+  color: var(--primary);
+  box-shadow: inset 3px 0 var(--primary);
+}
+.main {
+  max-width: 1280px;
+  margin: auto;
+  padding: 32px 48px;
+}
+.previewBar {
+  background: var(--muted);
+  color: var(--sub);
+  font-size: 12px;
+}
+.header {
+  margin-bottom: 32px;
+}
+.header h1 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 600;
+  letter-spacing: -1.8px;
+}
+.breadcrumb {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.greetingDot {
+  background: var(--primary);
+}
+.dateHeading h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.dateControls {
+  font-size: 12px;
+}
+.week {
+  gap: 0;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.day {
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  min-height: 88px;
+}
+.day strong {
+  font-size: 28px;
+  font-weight: 500;
+}
+.day > span:first-child {
+  font-size: 12px;
+}
+.day:hover {
+  background: var(--muted);
+}
+.day.daySelected {
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: 4px 4px 22px 4px;
+}
+.todayMark {
+  width: 6px;
+  height: 6px;
+}
+.dashboardGrid {
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 40px;
+}
+.primaryColumn {
+  gap: 32px;
+}
+.summaryColumn {
+  gap: 0;
+  border-left: 1px solid var(--border);
+  padding-left: 28px;
+}
+.habitPanel {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 12px;
+}
+.habitPanel > .sectionHead {
+  margin-bottom: 16px;
+}
+.habitPanel > .primaryButton {
+  width: auto;
+  margin: 0;
+  padding: 12px 16px;
+}
+.habitPanel > .progressLine,
+.habitPanel > .habitList {
+  grid-column: 1 / -1;
+}
+.progressLine {
+  margin: 6px 0 2px;
+}
+.track {
+  height: 3px;
+}
+.track span {
+  background: var(--success);
+}
+.progressLine strong {
+  color: var(--sub);
+  font-weight: 500;
+}
+.habitList {
+  margin: 0;
+}
+.habitRow {
+  padding: 17px 0;
+  gap: 8px;
+}
+.moduleIcon,
+.moduleIcon[data-module] {
+  background: transparent;
+  border-radius: 0;
+}
+.habitInfo strong {
+  font-weight: 600;
+}
+.addButton,
+.doneBadge {
+  background: none;
+  border-radius: 50%;
+}
+.addButton {
+  border: 1px solid var(--border);
+}
+.primaryButton,
+.secondaryButton,
+.waterButton {
+  border-radius: 6px;
+}
+.waterPanel,
+.financePanel {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0 0 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+.waterContent {
+  margin: 18px 0;
+  justify-content: flex-start;
+}
+.waterContent strong {
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+.waterUnit {
+  font-size: 16px;
+  color: var(--sub);
+  letter-spacing: 0;
+}
+.waterContent small {
+  display: none;
+}
+.waterButton {
+  background: transparent;
+  color: var(--water);
+  border: 1px solid var(--control);
+}
+.bigMoney {
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+.quickGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.quickGrid button {
+  border-radius: 6px;
+  background: none;
+  padding: 8px 12px;
+  gap: 8px;
+}
+.quickGrid .moduleIcon {
+  width: 24px;
+  height: 24px;
+}
+.quickGrid button > svg:last-child {
+  display: none;
+}
+.quickSection .sectionHead > span {
+  display: none;
+}
+.reflection {
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+  background: none;
+  padding: 28px 0 0;
+}
+.moods button {
+  background: none;
+  border-radius: 24px;
+  font-size: 13px;
+}
+.timeline,
+.settingsPanel {
+  border-radius: 6px;
+  box-shadow: none;
+}
+.financeStats > div {
+  background: none;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 2px solid var(--border);
+}
+.walletGrid > div {
+  border-radius: 6px;
+}
+.footer {
+  margin-top: 40px;
+}
+@media (min-width: 768px) and (max-width: 1099px) {
+  .sidebar {
+    width: 80px;
+    padding: 24px 12px;
+  }
+  .workspace {
+    margin-left: 80px;
+  }
+  .main {
+    padding: 28px;
+  }
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+  .summaryColumn {
+    border-left: 0;
+    padding-left: 0;
+    gap: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .workspace {
+    margin: 0;
+  }
+  .main {
+    padding: 24px 20px 110px;
+  }
+  .previewBar {
+    font-size: 11px;
+    padding: 4px 20px;
+  }
+  .previewBar button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .header {
+    margin-bottom: 24px;
+  }
+  .header h1 {
+    font-size: 30px;
+    letter-spacing: -1.2px;
+  }
+  .header p {
+    font-size: 13px;
+  }
+  .dateHeading {
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+  .dateHeading h2 {
+    font-size: 15px;
+  }
+  .dateControls {
+    gap: 0;
+    margin-left: auto;
+  }
+  .dateControls > span {
+    display: none;
+  }
+  .week {
+    margin-bottom: 24px;
+    padding: 6px 0;
+  }
+  .day {
+    min-height: 76px;
+    padding: 10px 2px;
+    border-radius: 0;
+  }
+  .day strong {
+    font-size: 23px;
+  }
+  .day > span:first-child {
+    font-size: 11px;
+  }
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .habitPanel {
+    padding: 0;
+    column-gap: 8px;
+  }
+  .habitPanel > .primaryButton {
+    font-size: 12px;
+    padding: 10px;
+    gap: 4px;
+  }
+  .habitPanel > .primaryButton svg {
+    width: 16px;
+  }
+  .habitPanel .sectionHead {
+    gap: 0;
+  }
+  .habitPanel .sectionHead > .iconButton {
+    flex-shrink: 0;
+  }
+  .habitPanel .sectionHead h2 {
+    font-size: 17px;
+  }
+  .habitInfo strong {
+    font-size: 15px;
+  }
+  .habitInfo small {
+    font-size: 13px;
+  }
+  .habitRow {
+    gap: 4px;
+    padding: 14px 0;
+  }
+  .habitRow .moduleIcon {
+    width: 28px;
+    height: 44px;
+  }
+  .detailsButton {
+    width: 44px;
+    flex-shrink: 0;
+  }
+  .summaryColumn {
+    padding: 0;
+    border: 0;
+  }
+  .waterPanel,
+  .financePanel {
+    margin: 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 0;
+  }
+  .waterContent {
+    justify-content: flex-start;
+    margin: 12px 0;
+  }
+  .waterContent strong {
+    font-size: 32px;
+  }
+  .reflection {
+    padding: 24px 0 0;
+  }
+  .mobileNav {
+    background: var(--surface);
+    padding-top: 8px;
+  }
+  .mobileNav :is(button, a) {
+    font-size: 11px;
+    border-radius: 0;
+  }
+  .mobileNav .mobileActive {
+    background: none;
+    color: var(--primary);
+    box-shadow: inset 0 2px var(--primary);
+  }
+  .quickGrid button {
+    font-size: 13px;
+    min-height: 44px;
+  }
+  .timeline,
+  .settingsPanel {
+    padding: 18px;
+  }
+  .footer {
+    gap: 12px;
+  }
+}
+@media (max-width: 350px) {
+  .main {
+    padding-inline: 12px;
+  }
+  .habitPanel {
+    grid-template-columns: 1fr;
+  }
+  .habitPanel > .primaryButton {
+    justify-self: start;
+    margin-bottom: 14px;
+  }
+  .habitInfo strong {
+    font-size: 14px;
+  }
+  .moods {
+    flex-wrap: wrap;
+  }
+}
+
+.agendaEmpty {
+  grid-column: 1 / -1;
+  color: var(--sub);
+  padding: 24px 0;
+}
+@media (max-width: 767px) {
+  .habitPanel {
+    grid-template-columns: 1fr;
+  }
+  .habitPanel > .sectionHead {
+    margin-bottom: 8px;
+  }
+  .habitPanel > .primaryButton {
+    justify-self: start;
+    margin-bottom: 16px;
+  }
+}

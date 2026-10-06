@@ -1,0 +1,213 @@
+@import '@fontsource-variable/plus-jakarta-sans';
+:root {
+  --canvas: #f7f7f2;
+  --surface: #fff;
+  --muted: #eaece5;
+  --text: #252c29;
+  --sub: #59635d;
+  --border: #d6dcd4;
+  --control: #77837a;
+  --primary: #9b2853;
+  --on-primary: #fff;
+  --soft: #f6e6ed;
+  --success: #146b52;
+  --danger: #b52d45;
+  --water: #126b80;
+  --water-soft: #e0f4f9;
+  --exercise: #a83f2e;
+  --exercise-soft: #fff0e9;
+  --study: #7147a0;
+  --study-soft: #f2ecfb;
+  --finance: #146b52;
+  --finance-soft: #e3f6ee;
+  --warning: #805000;
+  --warning-soft: #fff4d9;
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  --canvas: #191f1d;
+  --surface: #222b27;
+  --muted: #303b35;
+  --text: #f2f4ec;
+  --sub: #b9c6bb;
+  --border: #425248;
+  --control: #869c8d;
+  --primary: #f3a9c1;
+  --on-primary: #361422;
+  --soft: #482b37;
+  --success: #78dfc0;
+  --danger: #ffa8b5;
+  --water: #83dcec;
+  --water-soft: #173d49;
+  --exercise: #ffa88c;
+  --exercise-soft: #492d2b;
+  --study: #d1b3fa;
+  --study-soft: #392b51;
+  --finance: #78dfc0;
+  --finance-soft: #183e35;
+  --warning: #ffd18c;
+  --warning-soft: #443720;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']):not([data-theme='dark']) {
+    --canvas: #191f1d;
+    --surface: #222b27;
+    --muted: #303b35;
+    --text: #f2f4ec;
+    --sub: #b9c6bb;
+    --border: #425248;
+    --control: #869c8d;
+    --primary: #f3a9c1;
+    --on-primary: #361422;
+    --soft: #482b37;
+    --success: #78dfc0;
+    --danger: #ffa8b5;
+    --water: #83dcec;
+    --water-soft: #173d49;
+    --exercise: #ffa88c;
+    --exercise-soft: #492d2b;
+    --study: #d1b3fa;
+    --study-soft: #392b51;
+    --finance: #78dfc0;
+    --finance-soft: #183e35;
+    --warning: #ffd18c;
+    --warning-soft: #443720;
+    color-scheme: dark;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+h1 {
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: -1.2px;
+}
+h2 {
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+h3 {
+  font-size: 16px;
+}
+svg {
+  flex-shrink: 0;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid var(--control);
+  border-radius: 10px;
+  padding: 11px 13px;
+  background: var(--surface);
+  color: var(--text);
+}
+textarea {
+  resize: vertical;
+}
+input[type='checkbox'] {
+  width: 20px;
+  min-height: 20px;
+  accent-color: var(--primary);
+}
+label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+small {
+  font-size: 13px;
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+::selection {
+  background: var(--soft);
+  color: var(--primary);
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 26px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-padding-bottom: 100px;
+}
+button,
+a,
+input,
+textarea,
+select {
+  scroll-margin-block: 16px 100px;
+}

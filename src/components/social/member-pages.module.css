@@ -1,0 +1,272 @@
+.main {
+  max-width: 1040px;
+  margin: auto;
+  padding: 40px 28px calc(120px + env(safe-area-inset-bottom));
+}
+.back,
+.ownLink {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.back:hover,
+.ownLink:hover,
+.storiesHeading a:hover {
+  text-decoration: underline;
+}
+.eyebrow {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.header {
+  margin: 30px 0 44px;
+  max-width: 680px;
+}
+.header h1,
+.profileHero h1 {
+  font-size: clamp(43px, 7vw, 72px);
+  letter-spacing: -0.07em;
+  line-height: 1.05;
+  margin: 10px 0 16px;
+}
+.header p,
+.profileHero p,
+.photoField p {
+  color: var(--sub);
+  line-height: 1.55;
+}
+.search {
+  border-top: 3px solid var(--primary);
+  padding-top: 24px;
+  max-width: 720px;
+  display: grid;
+  gap: 10px;
+}
+.search label,
+.edit label,
+.photoField label {
+  font-weight: 700;
+}
+.search > div,
+.edit form > div {
+  display: flex;
+  gap: 12px;
+}
+.search input,
+.edit input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 12px 14px;
+  min-height: 48px;
+}
+.search button,
+.edit form button {
+  border: 0;
+  border-radius: 8px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 750;
+  padding: 0 22px;
+  min-height: 48px;
+}
+.people {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  max-width: 720px;
+}
+.people li {
+  border-bottom: 1px solid var(--border);
+}
+.people a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text);
+  text-decoration: none;
+  min-height: 76px;
+  padding: 12px 2px;
+}
+.people a > span:last-child {
+  margin-left: auto;
+  color: var(--primary);
+}
+.people strong,
+.people small {
+  display: block;
+}
+.people small {
+  color: var(--sub);
+  margin-top: 4px;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-weight: 750;
+  overflow: hidden;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.avatarLarge {
+  width: 116px;
+  height: 116px;
+  font-size: 48px;
+}
+.profileHero {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  border-bottom: 1px solid var(--border);
+  padding: 34px 0 40px;
+}
+.profileHero h1 {
+  overflow-wrap: anywhere;
+}
+.profileHero p {
+  margin: 0;
+}
+.edit {
+  border-top: 3px solid var(--primary);
+  margin-top: 34px;
+  padding: 22px 0;
+  max-width: 700px;
+}
+.edit h2,
+.stories h2 {
+  font-size: 26px;
+  letter-spacing: -0.04em;
+  margin: 0 0 22px;
+}
+.edit form,
+.photoField {
+  display: grid;
+  gap: 10px;
+}
+.photoField {
+  margin-top: 26px;
+}
+.photoField p {
+  margin: 0;
+  font-size: 14px;
+}
+.photoField input {
+  max-width: 100%;
+  min-height: 44px;
+}
+.subtleButton {
+  justify-self: start;
+  border: 0;
+  background: none;
+  color: var(--primary);
+  min-height: 44px;
+  font-weight: 700;
+}
+.stories {
+  margin-top: 40px;
+}
+.storiesHeading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+}
+.storiesHeading a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+.stories ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.stories li {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+.stories li small,
+.stories li span {
+  color: var(--sub);
+}
+.stories li p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+.empty {
+  color: var(--sub);
+  padding: 22px 0;
+}
+.error,
+.notice {
+  padding: 12px 16px;
+  margin: 20px 0;
+  border-radius: 8px;
+  background: var(--soft);
+}
+.error {
+  color: var(--danger);
+}
+.notice {
+  color: var(--success);
+}
+.ownLink {
+  margin-top: 14px;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.main :focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .main {
+    padding: 24px 16px calc(120px + env(safe-area-inset-bottom));
+  }
+  .header {
+    margin: 20px 0 30px;
+  }
+  .profileHero {
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .avatarLarge {
+    width: 74px;
+    height: 74px;
+    font-size: 30px;
+  }
+  .profileHero h1 {
+    font-size: 40px;
+  }
+  .search > div,
+  .edit form > div {
+    flex-direction: column;
+  }
+  .search button,
+  .edit form button {
+    width: 100%;
+  }
+}
