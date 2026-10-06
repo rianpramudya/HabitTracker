@@ -6,3 +6,10 @@ node_modules/
 playwright-report/
 test-results/
 .preview/
+
+
+# Mengabaikan semua file markdown
+*.md
+
+# (Opsional) Jangan abaikan README.md karena biasanya GitHub membutuhkannya
+!README.md
